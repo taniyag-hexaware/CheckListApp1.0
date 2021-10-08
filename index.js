@@ -18,16 +18,21 @@ const taskRoutes = require("./routes/task");
 const app = express();
 
 // DB connection
+const dotenv = require("dotenv");
+dotenv.config();
 mongoose
-  .connect("mongodb+srv://user_616:root@cluster1.tc1ka.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+  // .connect("mongodb+srv://user_616:root@cluster1.tc1ka.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+  //   useNewUrlParser: true,
+  //   useUnifiedTopology: true,
     
-  })
-  .then(() => {
-    console.log("CONNECTED TO DATABASE");
-  });
-
+  // })
+  // .then(() => {
+  //   console.log("CONNECTED TO DATABASE");
+  // });
+  .connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
+    console.log("Connected to db!");
+    app.listen(port, () => console.log("Listening to http://localhost:7000"));
+});
 // middleware for cors to allow cross origin resource sharing
 app.use(cors());
 // middleware to convert our request data into JSON format
@@ -39,8 +44,8 @@ app.use("/api", workOrderRoutes);
 app.use("/api", taskRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument,swaggerUi));
 
-// start the server in the port 8000
-app.listen(port, () => {
-  console.log('Listening to http://localhost:${port}');
-});
+// // start the server in the port 8000
+// app.listen(port, () => {
+//   console.log('Listening to http://localhost:7000');
+// });
 
