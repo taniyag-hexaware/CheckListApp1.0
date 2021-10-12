@@ -1,9 +1,9 @@
-process.env.NODE_ENV = 'test';
+// process.env.NODE_ENV = 'test';
 
 const expect = require('chai').expect;
 const request = require('supertest');
 
-const app = require('../../../controller/workOrder.js');
+const app = require('../../../routes/workOrder.js');
 
 const conn = require('../../../index.js');
 
