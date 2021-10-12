@@ -71,24 +71,18 @@ function connect() {
 
       mockgoose.prepareStorage()
         .then(() => {
-          mongoose.connect(DB_CONNECT,
-            { useNewUrlParser: true},
-            ()=>{
-              console.log("Connected to db!");
-              app.listen(port, () => console.log('Listening to http://localhost:7001'));
-            })
+          mongoose.connect(process.env.DB_CONNECT,
+            { useNewUrlParser: true}
+            )
             .then((res, err) => {
               if (err) return reject(err);
               resolve();
             })
         })
     } else {
-        mongoose.connect(DB_CONNECT,
-          { useNewUrlParser: true},
-          ()=>{
-            console.log("Connected to db!");
-            app.listen(port, () => console.log('Listening to http://localhost:7001'));
-          })
+        mongoose.connect(process.env.DB_CONNECT,
+          { useNewUrlParser: true}
+    )
           .then((res, err) => {
             if (err) return reject(err);
             resolve();
@@ -123,5 +117,10 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument,swaggerUi)
 //   const demo='Hello My name is Taniya'
 //   res.send(demo.repeat(100000))
 // })
-
+connect()
+  .then(() => {
+    app.listen(port, () => {
+      console.log('Listening on port: ' + port);
+    });
+  });
 module.exports = {connect,close};
