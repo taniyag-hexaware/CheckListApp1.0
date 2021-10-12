@@ -34,6 +34,9 @@ exports.getAllWorkOrders = (req, res) => {
             }
             // return all the workOrder in json format
             res.json(workOrders);
+            console.log(workOrders)
+            
+            
         });
 };
 
