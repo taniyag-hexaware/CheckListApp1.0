@@ -35,7 +35,7 @@ exports.getAllWorkOrders = (req, res) => {
             if (err || !workOrders) {
               logger.error("400 Bad Request Error")
                 return res.status(400).json({
-                    error: "Something went wrong in finding all workOrders",
+                    result: "Something went wrong in finding all workOrders",
                 });
             }
             // return all the workOrder in json format
