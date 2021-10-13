@@ -12,11 +12,13 @@ exports.createWorkOrder = (req, res) => {
 
     WorkOrder.save().then(data => {
        logger.info("Successfully inserted a workOrder")
-        res.send(data);
+        res.status(201).send({
+          result:data
+        });
     }).catch(err => {
        logger.error("This is an internal server error")
         res.status(500).send({
-            message: err.message || "Something went wrong while creating new workOrder."
+            result: err.message || "Something went wrong while creating new workOrder."
         });
     });
 
@@ -37,7 +39,9 @@ exports.getAllWorkOrders = (req, res) => {
                 });
             }
             // return all the workOrder in json format
-            res.json(workOrders);  
+            res.status(200).json({
+             result:workOrders
+            });  
             logger.info("All the workOrders are displayed")         
             
         });
@@ -51,11 +55,11 @@ exports.getWorkOrder = (req, res) => {
             if (!workOrder) {
               logger.warn("404 - This workOrder with id " + req.params.id + " does not exist")
                 return res.status(404).send({
-                    message: "workOrder not found with id 1" + req.params.id
+                   result: "workOrder not found with id " + req.params.id
                 });
             }
 
-            res.send(workOrder);
+            res.status(200).send({result:workOrder});
             logger.info("workOrder found with id " + req.params.id)
 
 
@@ -63,12 +67,12 @@ exports.getWorkOrder = (req, res) => {
             if (err.kind === 'ObjectId') {
               logger.error("404 - workOrder not found with id " + req.params.id)
                 return res.status(404).send({
-                    message: "workOrder not found with id 2" + req.params.id
+                   result: "workOrder not found with id " + req.params.id
                 });
             }
             logger.error("500 - This is an internal server error")
             return res.status(500).send({
-                message: "Error getting workOrder with id 3" + req.params.id
+               result: "Error getting workOrder with id 3" + req.params.id
             });
         });
 };
@@ -81,7 +85,7 @@ exports.updateWorkOrder = (req, res) => {
   if (!req.body) {
     logger.error("400 - Bad Request Error")
     return res.status(400).send({
-      message: "Please fill all required field"
+     result: "Please fill all required field"
     });
   }
   // Find workOrder and update it with the request body
@@ -94,21 +98,21 @@ exports.updateWorkOrder = (req, res) => {
       if (!workOrder) {
         logger.error("404 - workOrder not found with id " + req.params.id)
         return res.status(404).send({
-          message: "workOrder not found with id 1" + req.params.id
+         result: "workOrder not found with id " + req.params.id
         });
       }
-      res.send(workOrder);
+      res.status(201).send({result:workOrder});
       logger.info("workOrder updated")
     }).catch(err => {
       if (err.kind === 'ObjectId') {
         logger.error("404 - workOrder not found with id " + req.params.id)
         return res.status(404).send({
-          message: "workOrder not found with id 2" + req.params.id
+         result: "workOrder not found with id 2" + req.params.id
         });
       }
       logger.error("500 - This is an internal server error")
       return res.status(500).send({
-        message: "Error updating workOrder with id 3" + req.params.id
+       result: "Error updating workOrder with id 3" + req.params.id
       });
     });
 };
@@ -121,21 +125,21 @@ exports.deleteWorkOrder = (req, res) => {
         if (!workOrder) {
           logger.error("404 - workOrder not found with id " + req.params.id)
           return res.status(404).send({
-            message: "workOrder not found with id " + req.params.id
+           result: "workOrder not found with id " + req.params.id
           });
         }
-        res.send({ message: "workOrder deleted successfully!" });
+        res.status(200).send({result: "workOrder deleted successfully!" });
         logger.info("workOrder deleted successfully")
       }).catch(err => {
         if (err.kind === 'ObjectId' || err.name === 'NotFound') {
           logger.error("404 - workOrder not found with id " + req.params.id)
           return res.status(404).send({
-            message: "workOrder not found with id " + req.params.id
+           result: "workOrder not found with id " + req.params.id
           });
         }
         logger.error("500 - This is an internal server error")
         return res.status(500).send({
-          message: "Could not delete workOrder with id " + req.params.id
+         result: "Could not delete workOrder with id " + req.params.id
         });
       });
   };
