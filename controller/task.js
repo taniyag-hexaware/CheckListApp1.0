@@ -40,7 +40,6 @@ exports.getAlltasks = (req, res) => {
 
 //To get a task by workorderId
 exports.gettaskbywork = (req, res) => {
- console.log("req",req.params.id);
    task.find({'wordOrderId':req.params.id})
     .sort("-createdAt")
     .then(task => {
