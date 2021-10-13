@@ -115,7 +115,7 @@ describe('Task APIs', () => {
      /**
      * Test the PUT route
      */
-      describe("PUT /task/:id/update", () => {
+      describe("PUT /task/update/:id/", () => {
         it("It should PUT an existing task", (done) => {
             const taskID = "615ef18869fad420ce41ea13";
             const task = {
@@ -124,7 +124,7 @@ describe('Task APIs', () => {
                 wordOrderId: "615ef03869fad420ce41ea0a"
             };
             chai.request(app)                
-                .put("/api/task/" + taskID + "/update")
+                .put("/api/task/update/" + taskID + "/")
                 .send(task)
                 .end((err, response) => {
                     response.should.have.status(200);
@@ -145,7 +145,7 @@ describe('Task APIs', () => {
                 wordOrderId: "615ef03869fad420ce41ea0a"
             };
             chai.request(app)                
-                .put("/api/task/" + taskID + "/update")
+                .put("/api/task/update/" + taskID + "/")
                 .send(task)
                 .end((err, response) => {
                     response.should.have.status(404);
@@ -156,11 +156,11 @@ describe('Task APIs', () => {
      /**
      * Test the DELETE route
      */
-      describe("DELETE /api/task/:id/delete", () => {
+      describe("DELETE /api/task/delete/:id/", () => {
         it("It should DELETE an existing task", (done) => {
             const taskID = "61659d5ad9e9b7490bf63fca";
             chai.request(app)                
-                .delete("/api/task/" + taskID + "/delete")
+                .delete("/api/task/delete/" + taskID + "/")
                 .end((err, response) => {
                     response.should.have.status(200);
                 done();
@@ -170,7 +170,7 @@ describe('Task APIs', () => {
         it("It should NOT DELETE a task that is not in the database", (done) => {
             const taskID = "145";
             chai.request(app)                
-            .delete("/api/task/" + taskID + "/delete")
+            .delete("/api/task/delete/" + taskID + "/")
             .end((err, response) => {
                     response.should.have.status(404);
                 done();
