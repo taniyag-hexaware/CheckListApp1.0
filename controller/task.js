@@ -15,6 +15,7 @@ exports.createtask = (req, res) => {
   Task.save().then(data => {
     res.send(data);
   }).catch(err => {
+    logger.error("This is an internal server error")
     res.status(500).send({
 
       message: err.message || "Something went wrong while creating new task."
@@ -27,29 +28,20 @@ exports.createtask = (req, res) => {
 
 //To get all the tasks
 exports.getAlltasks = (req, res) => {
-
   task.find()
     .sort("-createdAt")
     .exec((err, tasks) => {
-
       // error checking
       if (err || !tasks) {
-
+        logger.error("Bad request. Tasks cannot be found")
         return res.status(400).json({
           error: "Something went wrong in finding all tasks",
         });
-
       }
-      //logger.log(err.error);
+      logger.info("All tasks found")
       // return all the task in json format
       res.json(tasks);
-
-
     });
-
-
-
-
 };
 
 //To get a task by workorderId
@@ -58,30 +50,25 @@ exports.gettaskbywork = (req, res) => {
     .sort("-createdAt")
     .then(task => {
       if (!task) {
-
+        logger.warn("The workOrderId " + req.params.id + " does not exist")
         return res.status(404).send({
           message: "task not found with id 1" + req.params.id
         });
       }
-
+      logger.info("Tasks with workOrderId " + req.params.id + " found successfully")
       res.send(task);
-
-
     }).catch(err => {
       if (err.kind === 'ObjectId') {
-
+        logger.error("Incorrect workOrderId " + req.params.id)
         return res.status(404).send({
           message: "task not found with id 2" + req.params.id
         });
       }
-
-
-
+      logger.error("This is an internal server error")
       return res.status(500).send({
         message: "Error getting task with id 3" + req.params.id
       });
     });
-
 };
 
 
@@ -91,7 +78,7 @@ exports.gettask = (req, res) => {
   task.findById(req.params.id)
     .then(task => {
       if (!task) {
-        logger.warn("This task with id " + req.params.id + " does not exist")
+        logger.warn("The taskId " + req.params.id + " does not exist")
         return res.status(404).send({
           message: "task not found with id 1" + req.params.id
         });
@@ -99,11 +86,9 @@ exports.gettask = (req, res) => {
 
       res.send(task);
       logger.info("Task found with id " + req.params.id)
-
-
     }).catch(err => {
       if (err.kind === 'ObjectId') {
-        logger.error("Task not found with id " + req.params.id)
+        logger.error("Incorrect taskId " + req.params.id)
         return res.status(404).send({
           message: "task not found with id 2" + req.params.id
         });
@@ -121,6 +106,7 @@ exports.updatetask = (req, res) => {
   // Validate Request
 
   if (!req.body) {
+    logger.warn("Incomplete Body")
     return res.status(400).send({
       message: "Please fill all required field"
     });
@@ -135,17 +121,21 @@ exports.updatetask = (req, res) => {
   }, { new: true })
     .then(task => {
       if (!task) {
+        logger.warn("The taskId " + req.params.id + " does not exist")
         return res.status(404).send({
           message: "task not found with id 1" + req.params.id
         });
       }
+      logger.info("The task with taskId " + req.params.id + " is updated")
       res.send(task);
     }).catch(err => {
       if (err.kind === 'ObjectId') {
+        logger.error("Incorrect taskId " + req.params.id)
         return res.status(404).send({
           message: "task not found with id 2" + req.params.id
         });
       }
+      logger.error("This is an internal server error")
       return res.status(500).send({
         message: "Error updating task with id 3" + req.params.id
       });
@@ -158,17 +148,21 @@ exports.deletetask = (req, res) => {
   task.findByIdAndRemove(req.params.id)
     .then(task => {
       if (!task) {
+        logger.warn("The taskId " + req.params.id + " does not exist")
         return res.status(404).send({
           message: "task not found with id " + req.params.id
         });
       }
+      logger.info("The task with taskId " + req.params.id + " is deleted")
       res.send({ message: "task deleted successfully!" });
     }).catch(err => {
       if (err.kind === 'ObjectId' || err.name === 'NotFound') {
+        logger.error("Incorrect taskId " + req.params.id)
         return res.status(404).send({
           message: "task not found with id " + req.params.id
         });
       }
+      logger.error("This is an internal server error")
       return res.status(500).send({
         message: "Could not delete task with id " + req.params.id
       });
