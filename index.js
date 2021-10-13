@@ -15,6 +15,7 @@ const port = 7001;
 // we will create these routes in the future
 const workOrderRoutes = require("./routes/workOrder");
 const taskRoutes = require("./routes/task");
+const logger = require('./logger')
 
 const app = express();
 
@@ -121,6 +122,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument,swaggerUi)
 app.get('/workOrdertesting',(req,res)=>{
   res.send('Hello World')
   console.log("pm2 has been hit again")
+  logger.log("this is logger");
 })
 connect()
   .then(() => {
