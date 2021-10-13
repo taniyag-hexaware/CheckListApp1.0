@@ -118,9 +118,10 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument,swaggerUi)
 //   res.send(demo)
 // })
 
-// app.get('/workOrdertesting',(req,res)=>{
-//   res.send('Hello World')
-// })
+app.get('/workOrdertesting',(req,res)=>{
+  res.send('Hello World')
+  console.log("pm2 has been hit again")
+})
 connect()
   .then(() => {
     app.listen(port, () => {

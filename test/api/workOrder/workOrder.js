@@ -90,7 +90,7 @@ describe('Work Order APIs', () => {
      /**
      * Test the PUT route
      */
-      describe("PUT /workOrder/:id/update", () => {
+      describe("PUT /workOrder/update/:id", () => {
         it("It should PUT an existing task", (done) => {
             const workOrderID = "615fdcc30bb1039c38b19b8e";
             const workOrder = {
@@ -98,7 +98,7 @@ describe('Work Order APIs', () => {
                 description: "This is work order 1001 updated"
             };
             chai.request(app)                
-                .put("/api/workOrder/" + workOrderID + "/update")
+                .put("/api/workOrder/update/" + workOrderID )
                 .send(workOrder)
                 .end((err, response) => {
                     response.should.have.status(200);
@@ -117,7 +117,7 @@ describe('Work Order APIs', () => {
                 description: "This is work order 1001 updated"
             };
             chai.request(app)                
-                .put("/api/workOrder/" + workOrderID + "/update")
+                .put("/api/workOrder/update/" + workOrderID)
                 .send(workOrder)
                 .end((err, response) => {
                     response.should.have.status(404);
@@ -128,11 +128,11 @@ describe('Work Order APIs', () => {
      /**
      * Test the DELETE route
      */
-      describe("DELETE /api/workOrder/:id/delete", () => {
+      describe("DELETE /api/workOrder/delete/:id", () => {
         it("It should DELETE an existing workOrder", (done) => {
             const workOrderID = "616596fc833c97578c6d33e9";
             chai.request(app)                
-                .delete("/api/workOrder/" + workOrderID + "/delete")
+                .delete("/api/workOrder/delete/" + workOrderID )
                 .end((err, response) => {
                     response.should.have.status(200);
                 done();
@@ -142,7 +142,7 @@ describe('Work Order APIs', () => {
         it("It should NOT DELETE a task that is not in the database", (done) => {
             const workOrderID = "145";
             chai.request(app)                
-            .delete("/api/workOrder/" + workOrderID + "/delete")
+            .delete("/api/workOrder/delete/" + workOrderID )
             .end((err, response) => {
                     response.should.have.status(404);
                 done();

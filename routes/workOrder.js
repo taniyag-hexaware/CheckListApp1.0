@@ -22,10 +22,10 @@ router.get("/workOrder/:id/", getWorkOrder);
 router.post("/workOrder/create/", createWorkOrder);
 
 // to update the WorkOrder
-router.put("/workOrder/:id/update", updateWorkOrder);
+router.put("/workOrder/update/:id", updateWorkOrder);
 
 // to delete the WorkOrder
-router.delete("/workOrder/:id/delete", deleteWorkOrder);
+router.delete("/workOrder/delete/:id", deleteWorkOrder);
 
 // we will export the router to import it in the index.js
 module.exports = router;
