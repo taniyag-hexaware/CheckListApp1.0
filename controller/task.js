@@ -28,7 +28,7 @@ exports.createtask = (req, res) => {
 
 //To get all the tasks
 exports.getAlltasks = (req, res) => {
-  task.find()
+  task.find({}).select('task_name')
     .sort("-createdAt")
     .exec((err, tasks) => {
       // error checking
@@ -46,7 +46,7 @@ exports.getAlltasks = (req, res) => {
 
 //To get a task by workorderId
 exports.gettaskbywork = (req, res) => {
-  task.find({ 'wordOrderId': req.params.id })
+  task.find({ 'wordOrderId': req.params.id }).select('task_name task_description')
     .sort("-createdAt")
     .then(task => {
       if (!task) {
