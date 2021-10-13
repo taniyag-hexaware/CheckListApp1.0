@@ -26,10 +26,10 @@ router.get("/taskwork/:id/", gettaskbywork);
 router.post("/task/create/", createtask);
 
 // to update the task
-router.put("/task/update:id/", updatetask);
+router.put("/task/update/:id/", updatetask);
 
 // to delete the task
-router.delete("/task/delete:id/", deletetask);
+router.delete("/task/delete/:id/", deletetask);
 
 // we will export the router to import it in the index.js
 module.exports = router;
