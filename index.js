@@ -9,6 +9,8 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 const compression = require('compression');
 
+const logger = require('./logger');
+
 // we are using port 7000
 const port = 7001;
 
@@ -120,8 +122,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument,swaggerUi)
 
 app.get('/workOrdertesting',(req,res)=>{
   res.send('Hello World')
-  console.log("pm2 has been hit again")
+  console.log("pm2 has been hit again");
+ 
 })
+
+
 connect()
   .then(() => {
     app.listen(port, () => {
