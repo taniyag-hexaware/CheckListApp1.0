@@ -1,0 +1,325 @@
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Taniya Ghosh\CheckListApp1.0\node_modules\express\lib\application.js:618:24)
+    at C:\Users\Taniya Ghosh\CheckListApp1.0\index.js:134:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 7001
+}

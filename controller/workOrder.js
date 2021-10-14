@@ -29,6 +29,7 @@ exports.createWorkOrder = (req, res) => {
 exports.getAllWorkOrders = (req, res) => {
 
     workOrder.find()
+    .select('name')
         .sort("-createdAt")
         .exec((err, workOrders) => {
             // error checking
