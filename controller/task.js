@@ -15,7 +15,7 @@ exports.createtask = (req, res) => {
   Task.save().then(data => {
     res.status(201).send({result:data});
   }).catch(err => {
-    logger.error("This is an internal server error")
+    logger.error("Something went wrong while creating new task.")
     res.status(500).send({
 
       result: err.message || "Something went wrong while creating new task."
@@ -64,7 +64,7 @@ exports.gettaskbywork = (req, res) => {
           result: "task not found with id " + req.params.id
         });
       }
-      logger.error("This is an internal server error")
+      logger.error("Error getting task with id "+ req.params.id)
       return res.status(500).send({
         result: "Error getting task with id " + req.params.id
       });
@@ -93,7 +93,7 @@ exports.gettask = (req, res) => {
           result: "task not found with id " + req.params.id
         });
       }
-      logger.error("This is an internal server error")
+      logger.error("Error getting task with id " + req.params.id)
       return res.status(500).send({
         result: "Error getting task with id " + req.params.id
       });
@@ -135,7 +135,7 @@ exports.updatetask = (req, res) => {
           result: "task not found with id " + req.params.id
         });
       }
-      logger.error("This is an internal server error")
+      logger.error("Error updating task with id " + req.params.id)
       return res.status(500).send({
         result: "Error updating task with id " + req.params.id
       });
@@ -162,7 +162,7 @@ exports.deletetask = (req, res) => {
           result: "task not found with id " + req.params.id
         });
       }
-      logger.error("This is an internal server error")
+      logger.error("Could not delete task with id " + req.params.id)
       return res.status(500).send({
         result: "Could not delete task with id " + req.params.id
       });
