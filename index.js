@@ -116,11 +116,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument,swaggerUi)
 //   console.log('Listening to http://localhost:7000');
 // });
 
-// app.get('/',(req,res)=>
-// {
-//   const demo=
-//   res.send(demo)
-// })
+app.get('/',(req,res)=>
+{
+  const demo="Welcome to Checklist App";
+  res.send(demo);
+})
 
 app.get('/workOrdertesting',(req,res)=>{
   res.send('Hello World')
