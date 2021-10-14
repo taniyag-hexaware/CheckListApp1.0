@@ -16,7 +16,7 @@ exports.createWorkOrder = (req, res) => {
           result:data
         });
     }).catch(err => {
-       logger.error("This is an internal server error")
+       logger.error("Something went wrong while creating new workOrder.")
         res.status(500).send({
             result: err.message || "Something went wrong while creating new workOrder."
         });
@@ -35,7 +35,7 @@ exports.getAllWorkOrders = (req, res) => {
             if (err || !workOrders) {
               logger.error("400 Bad Request Error")
                 return res.status(400).json({
-                    error: "Something went wrong in finding all workOrders",
+                    result: "Something went wrong in finding all workOrders",
                 });
             }
             // return all the workOrder in json format
@@ -70,9 +70,9 @@ exports.getWorkOrder = (req, res) => {
                    result: "workOrder not found with id " + req.params.id
                 });
             }
-            logger.error("500 - This is an internal server error")
+            logger.error("Error getting workOrder with id " + req.params.id)
             return res.status(500).send({
-               result: "Error getting workOrder with id 3" + req.params.id
+               result: "Error getting workOrder with id " + req.params.id
             });
         });
 };
@@ -110,7 +110,7 @@ exports.updateWorkOrder = (req, res) => {
          result: "workOrder not found with id 2" + req.params.id
         });
       }
-      logger.error("500 - This is an internal server error")
+      logger.error("Error updating workOrder with id 3" + req.params.id)
       return res.status(500).send({
        result: "Error updating workOrder with id 3" + req.params.id
       });
@@ -137,7 +137,7 @@ exports.deleteWorkOrder = (req, res) => {
            result: "workOrder not found with id " + req.params.id
           });
         }
-        logger.error("500 - This is an internal server error")
+        logger.error("Could not delete workOrder with id " + req.params.id)
         return res.status(500).send({
          result: "Could not delete workOrder with id " + req.params.id
         });

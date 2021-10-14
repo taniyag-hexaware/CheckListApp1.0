@@ -9,16 +9,18 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 const compression = require('compression');
 
-
+const dotenv = require("dotenv");
+dotenv.config();
 
 // we are using port 7000
-const port = 7001;
+const port = process.env.PORT;
 
 // we will create these routes in the future
 const workOrderRoutes = require("./routes/workOrder");
 const taskRoutes = require("./routes/task");
 const logger = require('./logger')
 
+const connect=require("./config/dbConfig");
 const app = express();
 
 app.use(
@@ -30,8 +32,7 @@ app.use(
 )
 
 // DB connection
-const dotenv = require("dotenv");
-dotenv.config();
+
 
 // function connect()
 // {
@@ -65,34 +66,34 @@ dotenv.config();
    
 // }
 
-function connect() {
-  return new Promise((resolve, reject) => {
+// function connect() {
+//   return new Promise((resolve, reject) => {
 
-    if (process.env.NODE_ENV === 'test') {
-      const Mockgoose = require('mockgoose').Mockgoose;
-      const mockgoose = new Mockgoose(mongoose);
+//     if (process.env.NODE_ENV === 'test') {
+//       const Mockgoose = require('mockgoose').Mockgoose;
+//       const mockgoose = new Mockgoose(mongoose);
 
-      mockgoose.prepareStorage()
-        .then(() => {
-          mongoose.connect(process.env.DB_CONNECT,
-            { useNewUrlParser: true}
-            )
-            .then((res, err) => {
-              if (err) return reject(err);
-              resolve();
-            })
-        })
-    } else {
-        mongoose.connect(process.env.DB_CONNECT,
-          { useNewUrlParser: true}
-    )
-          .then((res, err) => {
-            if (err) return reject(err);
-            resolve();
-          })
-    }
-  });
-}
+//       mockgoose.prepareStorage()
+//         .then(() => {
+//           mongoose.connect(process.env.DB_CONNECT,
+//             { useNewUrlParser: true}
+//             )
+//             .then((res, err) => {
+//               if (err) return reject(err);
+//               resolve();
+//             })
+//         })
+//     } else {
+//         mongoose.connect(process.env.DB_CONNECT,
+//           { useNewUrlParser: true}
+//     )
+//           .then((res, err) => {
+//             if (err) return reject(err);
+//             resolve();
+//           })
+//     }
+//   });
+// }
 function close() {
   return mongoose.disconnect();
 }
