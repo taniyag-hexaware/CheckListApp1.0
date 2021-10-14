@@ -80,7 +80,7 @@ exports.gettask = (req, res) => {
       if (!task) {
         logger.warn("The taskId " + req.params.id + " does not exist")
         return res.status(404).send({
-          result: "task not found with id 1" + req.params.id
+          result: "task not found with id " + req.params.id
         });
       }
 
@@ -90,12 +90,12 @@ exports.gettask = (req, res) => {
       if (err.kind === 'ObjectId') {
         logger.error("Incorrect taskId " + req.params.id)
         return res.status(404).send({
-          result: "task not found with id 2" + req.params.id
+          result: "task not found with id " + req.params.id
         });
       }
       logger.error("This is an internal server error")
       return res.status(500).send({
-        result: "Error getting task with id 3" + req.params.id
+        result: "Error getting task with id " + req.params.id
       });
     });
 };

@@ -9,10 +9,11 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 const compression = require('compression');
 
-
+const dotenv = require("dotenv");
+dotenv.config();
 
 // we are using port 7000
-const port = 7001;
+const port = process.env.PORT;
 
 // we will create these routes in the future
 const workOrderRoutes = require("./routes/workOrder");
@@ -30,8 +31,7 @@ app.use(
 )
 
 // DB connection
-const dotenv = require("dotenv");
-dotenv.config();
+
 
 // function connect()
 // {
